@@ -21,7 +21,7 @@ body {
    grid-template-columns: 18% 64% 20%; 
    gap: 10px;
 }
-.ps-lg-5, .row .col-lg-2, .fourth {
+.pdelete, .row .col-lg-2, .fourth {
     background-color: white;
 }
 .row .card:hover {
