@@ -32,8 +32,9 @@
                     <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="m-1"><img src="./image/1.png" width="20" alt=""></span> Account
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
+                    <ul class="dropdown-menu px-2">
+                      <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+                      <button onclick="signIn()" class="btn fw-semibold text-light w-100 px-0">SIGN IN</button>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -554,4 +555,9 @@
   </footer>
 </div>
 </body>
+<script>
+  const signIn = () => {
+    window.location.href = "signIn.html"
+  }
+</script>
 </html>

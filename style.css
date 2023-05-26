@@ -1,0 +1,43 @@
+body {
+    background-color: #f1f1f2;
+}
+* {
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: white;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+.btn .btn:hover {
+    background-color: #ff9900 !important;
+}
+.li-style {
+    list-style: none;
+}
+.grid-container{
+    display: grid;
+   grid-template-columns: 18% 64% 20%; 
+   gap: 10px;
+}
+.pdelete, .row .col-lg-2, .fourth {
+    background-color: white;
+}
+.row .card:hover {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    margin: 0px 2px;
+    transform: scale(1.03)
+    
+}
+.card {
+    border: none;
+}
+.addToCart {
+    background-color: #ff9900;
+}
+@media screen and (max-width:475px){
+    .border-dark {
+        width: 100vw !important;
+    }
+}
