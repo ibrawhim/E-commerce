@@ -22,12 +22,7 @@
 
 
     <script>
-        signInWithMail.addEventListener("click",()=>{
-            alert("here")
-        })
-        signInWithGoogle.addEventListener("click",()=>{
-            alert("here")
-        })
+        
     </script>
 
 <script type="module">
@@ -53,12 +48,21 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+   signInWithGoogle.addEventListener("click",()=>{
     signInWithPopup(auth, provider)
    .then((result) => {
     console.log(result);
+    window.location.href = "index.html"
    }).catch((error) => {
-
+    console.log(error);
    });
+    })
+
+   signInWithMail.addEventListener("click",()=>{
+            alert("here")
+        })
+        
   </script>
 </body>
 </html>
