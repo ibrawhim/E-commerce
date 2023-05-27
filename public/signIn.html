@@ -12,8 +12,8 @@
         <h3 class="text-center">Welcome</h3>
         <p class="text-center">Type your e-mail and password or use google to log in or create an account.</p>
         <div class="row">
-            <input type="text" class="mx-2 py-2 my-3" placeholder="Enter Email">
-            <input type="text" class="mx-2 py-2 my-3" placeholder="Enter Password">
+            <input type="text" class="mx-2 py-2 my-3" placeholder="Enter Email" id="newEmail">
+            <input type="text" class="mx-2 py-2 my-3" placeholder="Enter Password" id="newPass">
             <button id="signInWithMail" class="mx-2 btn btn-light py-2 my-3">SIGN IN WITH EMAIL</button>
             <button id="signInWithGoogle" class="mx-2 btn btn-light py-2 my-3"><img class="mb-1" src="./image/logo_googleg_standard_color_48dp_1x-removebg-preview.png" width="20"  alt=""> SIGN IN USING GOOGLE</button>
         </div>
@@ -28,7 +28,7 @@
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -59,9 +59,17 @@
    });
     })
 
+    let email = newEmail.value
+    let password = newPass.value
    signInWithMail.addEventListener("click",()=>{
-            alert("here")
-        })
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    console.log(userCredential);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+    })
         
   </script>
 </body>
