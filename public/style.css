@@ -16,12 +16,16 @@ body {
 .li-style {
     list-style: none;
 }
+section div a {
+    text-decoration: none;
+    color: black;
+}
 .grid-container{
     display: grid;
    grid-template-columns: 18% 64% 20%; 
    gap: 10px;
 }
-.pdelete, .row .col-lg-2, .fourth {
+.pdelete, .white, .fourth {
     background-color: white;
 }
 .row .card:hover {
