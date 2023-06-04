@@ -197,7 +197,6 @@
             <div class="mt-1 fs-5 fw-semibold">Flash Sales</div>
             <div class="fs-5">Time Left:
               <span class="fs-5 fw-semibold" id="hour">15</span><span class="fs-5 fw-semibold">h: </span><span class="fs-5 fw-semibold" id="min">10</span><span class="fs-5 fw-semibold">m: </span><span class="fs-5 fw-semibold" id="sec">5</span><span class="fs-5 fw-semibold">s:</span>
-              <button id="new">here</button>
             </div>
             <div class="mt-1 fs-5 fw-semibold">See all</div>
           </div>
@@ -710,19 +709,23 @@
   var myMin = Number(document.getElementById('min').innerHTML);
   var mySec = Number(document.getElementById('sec').innerHTML);
 
-  document.getElementById("new").addEventListener("load",cover)
-  
-  disp = () => {
-    setInterval(()=>{
+ const disp = () => {
       mySec--
+      setTimeout(disp,1000)
       sec.innerHTML = mySec
-    },1000)
-    if (mySec==0) {
-      mySec = 5
-      myMin--
-      min.innerHTML = myMin
-    }
-  }
+        if(mySec==0) {
+          sec.innerHTML = 5
+          sec.innerHTML--
+          myMin--
+          setTimeout(disp,1000)
+          min.innerHTML = myMin
+        }else if(myMin==0) {
+          myHour--
+          setTimeout(disp,1000)
+          hour.innerHTML = myHour
+        }  
+        }
+
 
 </script>
 </html>
