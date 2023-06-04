@@ -34,6 +34,9 @@ section div a {
     transform: scale(1.03)
     
 }
+.flex-column li a {
+    color: white !important;
+}
 .card {
     border: none;
 }

@@ -10,9 +10,9 @@
     <link rel="icon" href="./image/automo.png">
     <title>E-commerce</title>
 </head>
-<body>
+<body onload="disp()">
     <header class="ps-5 bg-success">
-        <!-- <img class="img-fluid" src="./image/free-delivery-top-strip_1 (1).gif" alt=""> -->
+        <img class="img-fluid" src="./image/free-delivery-top-strip_1 (1).gif" alt="">
         <img src="./image/Desktop_TS.png" class="img-fluid" alt="">
     </header>
 
@@ -74,8 +74,8 @@
       
       <section class="container my-3 my-sm-3">
         <div class="row">
-          <div class="col-lg-2 white rounded-3 col-md-12 col-sm-12">
-            <ul class="li-style  border-box">
+          <div class="col-lg-2 ps-0 white rounded-3 col-md-12 col-sm-12">
+            <ul class="li-style">
               <li class="mt-2"><img src="./image/nutrition_FILL0_wght400_GRAD0_opsz48.svg" width="25px" alt="">&nbsp; Supermarket</li>
               <li class="mt-2"><img src="./image/health_and_safety_FILL0_wght400_GRAD0_opsz48.svg" width="25px" alt="">&nbsp; Health & Beauty</li>
               <li class="mt-2"><img src="./image/home_FILL0_wght400_GRAD0_opsz48.svg" width="25px" alt="">&nbsp; Home & Office</li>
@@ -200,7 +200,13 @@
       </section>
       <section class="container rounded-2 my-3 fourth">
         <div class="row gap-1 ps-1 pe-1">
-          <div class="bg-info py-2"><marquee behavior="" direction="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore dolores nam deserunt molestiae repellendus, tenetur, fugiat explicabo odit inventore ab a dolorem consequatur ipsam odio deleniti. Neque reiciendis nesciunt ea.!</marquee></div>
+          <div class="bg-info d-flex justify-content-between">
+            <div class="mt-1 fs-5 fw-semibold">Flash Sales</div>
+            <div class="fs-5">Time Left:
+              <span class="fs-5 fw-semibold" id="hour">15</span><span class="fs-5 fw-semibold">h: </span><span class="fs-5 fw-semibold" id="min">10</span><span class="fs-5 fw-semibold">m: </span><span class="fs-5 fw-semibold" id="sec">5</span><span class="fs-5 fw-semibold">s:</span>
+            </div>
+            <div class="mt-1 fs-5 fw-semibold">See all</div>
+          </div>
           <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
               <img src="./image/Edifier 68 Watts Channel Bluetooth Multimedia Speakers_yyt (1).jpg" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
@@ -500,11 +506,11 @@
   </div>
 </section>
 
-<div class="container-fluid px-5">
+<div class="container-fluid px-5 bg-dark">
   <footer class="py-5">
     <div class="row">
       <div class="col-6 m-5 col-md-2 mb-3">
-        <h6 class="fw-bold">NEED HELP?</h6>
+        <h6 class="fw-bold text-light">NEED HELP?</h6>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help center</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
@@ -520,7 +526,7 @@
       </div>
 
       <div class="col-6 m-5 col-md-2 mb-3">
-        <h6 class="fw-bold">ABOUT US</h6>
+        <h6 class="fw-bold text-light">ABOUT US</h6>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Careers</a></li>
@@ -536,7 +542,7 @@
       </div>
 
       <div class="col-6 col-md-2 mb-3 m-5">
-        <h6 class="fw-bold">MAKE MONEY WITH US</h6>
+        <h6 class="fw-bold text-light">MAKE MONEY WITH US</h6>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sell on our platform</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become a Sales Consultant</a></li>
@@ -547,7 +553,7 @@
       </div>
 
       <div class="col-6 col-md-2 mb-3 m-5">
-        <h6 class="fw-bold">INTERNATIONAL</h6>
+        <h6 class="fw-bold text-light">INTERNATIONAL</h6>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Algeria &nbsp; &nbsp; Senegal</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ghana &nbsp; &nbsp; Uganda</a></li>
@@ -608,5 +614,21 @@
     console.log("error");
   }
 });
+</script>
+<script>
+  var myHour = Number(document.getElementById('hour').innerHTML);
+  var myMin = Number(document.getElementById('min').innerHTML);
+  var mySec = Number(document.getElementById('sec').innerHTML);
+
+  disp = () => {
+    setInterval(()=>{
+      myMin--
+      min.innerHTML = myMin
+    },1000)
+    if (mySec==0) {
+      mySec = 5
+      myMin--
+    }
+  }
 </script>
 </html>
