@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./style.css">
+    <script src="./scr.js"></script>
     <link rel="icon" href="./image/automo.png">
     <title>E-commerce</title>
 </head>
@@ -111,32 +112,32 @@
 
       <section class="container rounded-2 pdelete py-2 my-3">
           <div class="row">
-              <div class="col">
-                <img src="./image/Up to 30_ Off (1).png" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Up to 30_ Off (1).png" class="w-75" alt="">
                 <p class="text-center">Up to 30_ Off</p>
               </div>
-              <div class="col">
-                <img src="./image/Televisions (1).jpg" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Televisions (1).jpg" class="w-75" alt="">
             <p class="text-center">Televisions</p>
               </div>
-              <div class="col">
-                <img src="./image/Refrigerators (1).jpg" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Refrigerators (1).jpg" class="w-75" alt="">
             <p class="text-center">Refridgerators</p>
               </div>
-              <div class="col">
-                <img src="./image/Phones & Tablets (1).png" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Phones & Tablets (1).png" class="w-75" alt="">
             <p class="text-center">Phones</p>
               </div>
-              <div class="col">
-                <img src="./image/Best Sellers (1).png" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Best Sellers (1).png" class="w-75" alt="">
                 <p class="text-center">Best Seller</p>
               </div>
-              <div class="col">
-                <img src="./image/Electronics (1).png" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Electronics (1).png" class="w-75" alt="">
                 <p class="text-center">Electronics</p>
               </div>
-              <div class="col">
-                <img src="./image/Groceries (1).png" class="" alt="">
+              <div class="col-lg col-md col-sm-2">
+                <img src="./image/Groceries (1).png" class="w-75" alt="">
             <p class="text-center">Groceries</p>
               </div>
           </div>
@@ -144,54 +145,52 @@
       <section class="container rounded-2 my-3 fourth">
           <div class="row gap-1 ps-1 pe-1">
             <div class="bg-info py-2 text-center fw-semibold">Top Selling Items</div>
-            <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rrem ">
-                <img onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)"  src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
-                <div class="card-body"><a href="itel.html">
-                  <p class="card-title"><a href="itel.html">Itel Mini-Phone</a></p>
-                  <p class="card-text"><a href="itel.html"> ₦3500.</a></p>
-                  <p class="text-decoration-line-through"><a href="itel.html">₦5200</a></p>
-                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rem;" onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)">
+                <img   src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-title">Itel Mini-Phone</p>
+                  <p class="card-text"> ₦3500.</p>
+                  <p class="text-decoration-line-through">₦5200</p>
                 </div>
                 </div>
-                <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rem;">
-                  <img onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)"  src="./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg" class="card-img-top img-fluid" alt="..."></a>
-                <a href="hisense.html"><img src="./" class="card-img-top" alt="..."></a>
+                <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rem;" onclick="save('./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg', `₦${100500}`, 'Hisense Air-condition', '244 Verified Ratings', 'Hisense',`₦150200`)">
+                <img src="./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                  <p class="card-title no-break"><a href="hisense.html">Hisense Air-condition</a></p>
-                  <p class="card-text"><a href="hisense.html">₦100500.</a></p>
-                  <p class="text-decoration-line-through"><a href="hisense.html">₦150200</a></p>
+                  <p class="card-title no-break">Hisense Air-condition</p>
+                  <p class="card-text">₦100500.</p>
+                  <p class="text-decoration-line-through">₦150200</p>
                 </div>
               </div>
-              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)">
-                  <a><img src="./image/Official Stores (1).png" class="card-img-top" alt="..."></a>
+              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/Official Stores (1).png', `₦${31000}`, 'Solar-Power', '85 Verified Ratings', 'Unknown',`₦50,000`)">
+                  <img src="./image/Official Stores (1).png" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <p class="card-title"><a href="solar.html">Solar-Power</a></p>
-                    <p class="card-text"><a href="solar.html">₦31000.</a></p>
-                    <p class="text-decoration-line-through"><a href="solar.html">₦50000</a></p>
+                    <p class="card-title">Solar-Power</p>
+                    <p class="card-text">₦31000.</p>
+                    <p class="text-decoration-line-through">₦50000</p>
                   </div>
                 </div>
-              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
+              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg', `₦${6000}`, 'Han-River Yam Pounder', '115 Verified Ratings', 'Unknown',`₦15,000`)">
                 <a href="yam.html"><img src="./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                  <p class="card-title"><a href="">Han-River Yam Pounder</a></p>
-                  <p class="card-text"><a href="">₦6000.</a></p>
-                  <p class="text-decoration-line-through"><a href="">₦15000</a></p>
+                  <p class="card-title">Han-River Yam Pounder</p>
+                  <p class="card-text">₦6000.</p>
+                  <p class="text-decoration-line-through">₦15000</p>
                 </div>
               </div>
-              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
-                <a href="oraimoear.html">                <img src="./image/Below ₦15_000 (1).jpg" class="card-img-top" alt="..."></a>
+              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg', `₦${15000}`, 'Oraimo ear-buds', '334 Verified Ratings', 'Unknown',`₦22,000`)">
+                <img src="./image/Below ₦15_000 (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-title"><a href="oraimoear.html">Oraimo ear-buds</a></p>
-                  <p class="card-text"><a href="oraimoear.html">₦15000.</a></p>
-                  <p class="text-decoration-line-through"><a href="oraimoear.html"> ₦22000</a></p>
+                  <p class="card-title">Oraimo ear-buds</p>
+                  <p class="card-text">₦15000.</p>
+                  <p class="text-decoration-line-through">₦22000</p>
                 </div>
               </div>
-              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
-                <a href="iron.html"><img src="./image/HAN RIVER Dry Iron (HRYD02) (1).jpg" class="card-img-top" alt="..."></a>
+              <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/HAN RIVER Dry Iron (HRYD02) (1).jpg', `₦${8500}`, 'Han-River Iron', '122 Verified Ratings', 'Unknown',`₦10,200`)">
+                <img src="./image/HAN RIVER Dry Iron (HRYD02) (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-title no-break"><a href="iron.html"> Han River Iron</a></p>
-                  <p class="card-text"><a href="iron.html">₦8500.</a></p>
-                  <p class="text-decoration-line-through"><a href="iron.html">₦10200</a></p>
+                  <p class="card-title no-break">Han River Iron</p>
+                  <p class="card-text">₦8500.</p>
+                  <p class="text-decoration-line-through">₦10200</p>
                 </div>
               </div>
         </div>
@@ -205,13 +204,12 @@
             </div>
             <div class="mt-1 fs-5 fw-semibold">See all</div>
           </div>
-          <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
-              <a href="eddifier.html"><img src="./image/Edifier 68 Watts Channel Bluetooth Multimedia Speakers_yyt (1).jpg" class="card-img-top img-fluid" alt="..."></a>
+          <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;" onclick="save('./image/Edifier 68 Watts Channel Bluetooth Multimedia Speakers_yyt (1).jpg', `₦${30500}`, 'Eddifier 68 Watts', '212 Verified Ratings', 'Unknown',`₦50,500`)">
+              <img src="./image/Edifier 68 Watts Channel Bluetooth Multimedia Speakers_yyt (1).jpg" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
-                <p class="card-title"><a href="">Ediffier 68 Watts</a></p>
-                <p class="card-text"><a href="eddifier.html">₦30,500.</a></p>
-                <p class="text-decoration-line-through"><a href="eddifier.html">₦50,500</a></p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                <p class="card-title">Ediffier 68 Watts</p>
+                <p class="card-text">₦30,500.</p>
+                <p class="text-decoration-line-through">₦50,500</p>
               </div>
             </div>
             <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
