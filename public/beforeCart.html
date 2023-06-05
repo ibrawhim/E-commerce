@@ -65,8 +65,8 @@
     <section style="background-color: white;" class="container mt-3 shadow">
         <div class="row gap-4">
             <div class="col-lg-8 ms-0 shadow border row col-md-9 col-sm-12">
-                <div class="col-lg-4" id="imageHere">
-                    <!-- <img class="w-100" src="./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg" alt=""> -->
+                <div class="col-lg-4">
+                    <img id="imageHere" class="w-100" src="" alt="">
                 </div>
                 <div class="col-lg-8 d-flex flex-column">
                     <div class="border-bottom">
@@ -143,5 +143,15 @@
     <p class="text-center text-light">&copy; 2023 Company, Inc</p>
   </footer>
 </div>
+
+<script>
+   let customerProduct = JSON.parse(localStorage.getItem('product'))
+   console.log(customerProduct);
+   imageHere.attributes.src.value = `${customerProduct.image}`
+   productNameHere.innerHTML = `${customerProduct.productName}`
+   productBrandHere.innerHTML = `${customerProduct.brand}`
+   ratingHere.innerHTML = `${customerProduct.rating}`
+   priceHere.innerHTML = `${customerProduct.price}`
+</script>
 </body>
 </html>

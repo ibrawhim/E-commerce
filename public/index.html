@@ -145,7 +145,7 @@
           <div class="row gap-1 ps-1 pe-1">
             <div class="bg-info py-2 text-center fw-semibold">Top Selling Items</div>
             <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rrem ">
-                <img onclick="save('./image/Below ₦10_000 (1).png', `#${3500}`, 'Itel Mini-Phone')"  src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
+                <img onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)"  src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
                 <div class="card-body"><a href="itel.html">
                   <p class="card-title"><a href="itel.html">Itel Mini-Phone</a></p>
                   <p class="card-text"><a href="itel.html"> ₦3500.</a></p>
@@ -154,7 +154,8 @@
                 </div>
                 </div>
               <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rem;">
-                <a href="hisense.html"><img src="./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg" class="card-img-top" alt="..."></a>
+                <img onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)"  src="./image/Hisense 1HP (Copper Coil) Split Air Conditioner AS0 (1).jpg" class="card-img-top img-fluid" alt="..."></a>
+                <a href="hisense.html"><img src="./" class="card-img-top" alt="..."></a>
                 <div class="card-body text-center">
                   <p class="card-title no-break"><a href="hisense.html">Hisense Air-condition</a></p>
                   <p class="card-text"><a href="hisense.html">₦100500.</a></p>
@@ -162,12 +163,14 @@
                 </div>
               </div>
               <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
-                <a href="solar.html"><img src="./image/Official Stores (1).png" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                  <p class="card-title"><a href="solar.html">Solar-Power</a></p>
-                  <p class="card-text"><a href="solar.html">₦31000.</a></p>
-                  <p class="text-decoration-line-through"><a href="solar.html">₦50000</a></p>
-                </div>
+                <a onclick="save('./image/Below ₦10_000 (1).png', `₦3500`, 'Itel Mini-Phone', '225 Verified Ratings', 'Itel',`₦5200`)">
+                  <a><img src="./image/Official Stores (1).png" class="card-img-top" alt="..."></a>
+                  <div class="card-body">
+                    <p class="card-title"><a href="solar.html">Solar-Power</a></p>
+                    <p class="card-text"><a href="solar.html">₦31000.</a></p>
+                    <p class="text-decoration-line-through"><a href="solar.html">₦50000</a></p>
+                  </div>
+                </a>
               </div>
               <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
                 <a href="yam.html"><img src="./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg" class="card-img-top" alt="..."></a>
@@ -728,11 +731,11 @@
           hour.innerHTML = myHour
         }  
         }
-        function save (image, price, pName) {
-          let map = {
-            image, price, pName
+        function save (image, price, productName,rating,brand,oldPrice) {
+          let customerProduct = {
+            image, price, productName,rating,brand,oldPrice
           }
-          localStorage.setItem("score", JSON.stringify(map))
+          localStorage.setItem("product", JSON.stringify(customerProduct))
           window.location.href = "beforeCart.html"
         }
 
