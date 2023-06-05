@@ -111,32 +111,32 @@
 
       <section class="container rounded-2 pdelete py-2 my-3">
           <div class="row">
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Up to 30_ Off (1).png" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Up to 30_ Off (1).png" class="" alt="">
                 <p class="text-center">Up to 30_ Off</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Televisions (1).jpg" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Televisions (1).jpg" class="" alt="">
             <p class="text-center">Televisions</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Refrigerators (1).jpg" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Refrigerators (1).jpg" class="" alt="">
             <p class="text-center">Refridgerators</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Phones & Tablets (1).png" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Phones & Tablets (1).png" class="" alt="">
             <p class="text-center">Phones</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Best Sellers (1).png" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Best Sellers (1).png" class="" alt="">
                 <p class="text-center">Best Seller</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Electronics (1).png" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Electronics (1).png" class="" alt="">
                 <p class="text-center">Electronics</p>
               </div>
-              <div class="col-lg col-md col-sm">
-                <img src="./image/Groceries (1).png" class="w-75" alt="">
+              <div class="col">
+                <img src="./image/Groceries (1).png" class="" alt="">
             <p class="text-center">Groceries</p>
               </div>
           </div>
@@ -145,7 +145,7 @@
           <div class="row gap-1 ps-1 pe-1">
             <div class="bg-info py-2 text-center fw-semibold">Top Selling Items</div>
             <div class="card col-lg col-md-6 col-sm-12 w-100 text-center" style="width: 18rrem ">
-                <a href="itel.html"><img src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
+                <img onclick="save('./image/Below ₦10_000 (1).png', `#${3500}`, 'Itel Mini-Phone')"  src="./image/Below ₦10_000 (1).png" class="card-img-top img-fluid" alt="..."></a>
                 <div class="card-body"><a href="itel.html">
                   <p class="card-title"><a href="itel.html">Itel Mini-Phone</a></p>
                   <p class="card-text"><a href="itel.html"> ₦3500.</a></p>
@@ -271,7 +271,7 @@
             </div>
           </div>
           <div class="card col-lg col-md-6 col-sm-12" style="width: 18rem;">
-            <img src="./image/Sprite Drink - 50cl Pet x 12 (1).jpg" class="card-img-top" alt="...">
+            <img  onclick="save('./image/Sprite Drink - 50cl Pet x 12 (1).jpg', `#${2500}`, 'Sprite drink 50cl')" src="./image/Sprite Drink - 50cl Pet x 12 (1).jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-title no-break">Sprite drink 50cl</p>
               <p class="card-text">₦2500.</p>
@@ -727,6 +727,13 @@
           setTimeout(disp,1000)
           hour.innerHTML = myHour
         }  
+        }
+        function save (image, price, pName) {
+          let map = {
+            image, price, pName
+          }
+          localStorage.setItem("score", JSON.stringify(map))
+          window.location.href = "beforeCart.html"
         }
 
 
