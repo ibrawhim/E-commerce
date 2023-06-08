@@ -59,8 +59,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown ms-3">
-                    <a class="nav-link fw-bold">
-                     <span class="m-1"><img src="./image/3.png" width="20" alt=""></span> Cart
+                    <a class="nav-link fw-bold" href="cart.html">
+                     <span class="m-1"><img src="./image/3.png" width="20" alt=""></span>Cart<span id="countCart" class="bg-warning"></span>
                     </a>
           </div>
         </div>
@@ -170,7 +170,7 @@
                   </div>
                 </div>
               <div class="card col-lg col-md-6 col-sm-12  w-100 text-center" style="width: 18rem;" onclick="save('./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg', `₦${6000}`, 'Han-River Yam Pounder', '115 Verified Ratings', 'Unknown',`₦15,000`)">
-                <a href="yam.html"><img src="./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg" class="card-img-top" alt="..."></a>
+                <img src="./image/HAN RIVER 2L Yam Pounder And Multifunctional Food_y (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-title">Han-River Yam Pounder</p>
                   <p class="card-text">₦6000.</p>
@@ -735,14 +735,19 @@
           hour.innerHTML = myHour
         }  
         }
+        customerArray = []
+        if (localStorage.product) {
+          customerArray = JSON.parse(localStorage.getItem('product'))
+        }
         function save (image, price, productName,rating,brand,oldPrice) {
           let customerProduct = {
             image, price, productName,rating,brand,oldPrice
           }
-          localStorage.setItem("product", JSON.stringify(customerProduct))
+          customerArray.push(customerProduct)
+          localStorage.setItem("product", JSON.stringify(customerArray))
+          console.log(customerArray);
           window.location.href = "beforeCart.html"
         }
-
 
 </script>
 </html>

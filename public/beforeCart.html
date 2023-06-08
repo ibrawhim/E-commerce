@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="display()">
     <header class="bg-success">
         <img class="img-fluid" src="./image/free-delivery-top-strip_1 (1).gif" alt="">
     </header>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="border-bottom">
                       <h5>VARIATION AVAILABLE</h5>
-                      <button class="bg-success border-0 rounded-2 addToCart py-3 w-100 fw-semibold text-light">ADD TO CART</button>
+                      <button onclick="addToMyCart()" class="bg-success border-0 rounded-2 addToCart py-3 w-100 fw-semibold text-light">ADD TO CART</button>
                     </div>
                 </div>
             </div>
@@ -145,14 +145,28 @@
 </div>
 
 <script>
-   let customerProduct = JSON.parse(localStorage.getItem('product'))
-   console.log(customerProduct);
-   imageHere.attributes.src.value = `${customerProduct.image}`
-   productNameHere.innerHTML = `${customerProduct.productName}`
-   productBrandHere.innerHTML = `Brand: ${customerProduct.brand}`
-   ratingHere.innerHTML = `${customerProduct.rating}`
-   priceHere.innerHTML = `${customerProduct.price}`
-   oldPriceHere.innerHTML = `${customerProduct.oldPrice}`
+   let customerArray = JSON.parse(localStorage.getItem('product'))
+   console.log(customerArray);
+ 
+
+  const display = () => {
+    for (let index = 0; index < customerArray.length; index++) {
+      imageHere.attributes.src.value = `${customerArray[index].image}`
+      productNameHere.innerHTML = `${customerArray[index].productName}`
+      productBrandHere.innerHTML = `Brand: ${customerArray[index].brand}`
+      ratingHere.innerHTML = `${customerArray[index].rating}`
+      priceHere.innerHTML = `${customerArray[index].price}`
+      oldPriceHere.innerHTML = `${customerArray[index].oldPrice}`
+  }
+  
+
+  }
+
+   
+   const addToMyCart = () => {
+    localStorage.setItem('customerItem',JSON.stringify(customerArray))
+    window.location.href = 'cart.html'
+   }
 </script>
 </body>
 </html>
